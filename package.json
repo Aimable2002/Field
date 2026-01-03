@@ -6,7 +6,8 @@
   "scripts": {
     "server": "nodemon Backend/server.js",
     "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend",
-    "start": "node backend/server.js"
+    "start": "node backend/server.js",
+    "script": "nodemon Backend/scripts/seedData.js"
   },
   "keywords": [],
   "author": "",

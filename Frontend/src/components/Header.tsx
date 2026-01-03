@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
-import { LogOut, ClipboardList, LayoutDashboard, Users, Menu, X } from 'lucide-react';
+import { LogOut, ClipboardList, LayoutDashboard, Users, Menu } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { Sheet, SheetHeader, SheetContent as SheetContentUI, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { SetupInitialData } from '@/components/SetupInitialData';
 
 const Header = () => {
   const { user, logout, isAuthenticated } = useAuth();
@@ -47,6 +48,9 @@ const Header = () => {
 
         {/* Desktop Right Section */}
         <div className="hidden md:flex items-center gap-4">
+          {/* Add Initialize Data Button */}
+          <SetupInitialData />
+          
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
             <Users className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">{user?.teamName}</span>
@@ -89,6 +93,11 @@ const Header = () => {
                 <div className="px-3 py-2">
                   <p className="text-sm text-muted-foreground">Logged in as</p>
                   <p className="font-medium">{user?.name}</p>
+                </div>
+
+                {/* Initialize Data Button for Mobile */}
+                <div className="px-2">
+                  <SetupInitialData />
                 </div>
 
                 {/* Navigation */}

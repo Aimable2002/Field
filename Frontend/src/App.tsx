@@ -10,6 +10,7 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import ResponseDetail from "./pages/ResponseDetail";
 import NotFound from "./pages/NotFound";
+import PerformanceDashboard from "./pages/PerformanceDashboard";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/signup" element={<Signup />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/response/:id" element={<ResponseDetail />} />
+            <Route path="/performance" element={<PerformanceDashboard/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

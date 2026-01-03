@@ -3,6 +3,7 @@ import cors from 'cors';
 import authRouter from './router/authRouter.js';
 import responseRouter from './router/responseRouter.js';
 import errorHandler from './middleware/errorHandler.js';
+import performanceRoutes from './router/performanceRoutes.js'
 import path from 'path'
 import { fileURLToPath } from 'url';
 
@@ -16,6 +17,7 @@ app.use(express.json());
 
 app.use('/api/auth', authRouter);
 app.use('/api/responses', responseRouter);
+app.use('/api/performance', performanceRoutes);
 
 app.use(errorHandler);
 
