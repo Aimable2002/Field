@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
-import { LogOut, ClipboardList, LayoutDashboard, Users, Menu } from 'lucide-react';
+import { LogOut, ClipboardList, LayoutDashboard, Users, Menu, BellPlusIcon } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { Sheet, SheetHeader, SheetContent as SheetContentUI, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { SetupInitialData } from '@/components/SetupInitialData';
@@ -16,6 +16,7 @@ const Header = () => {
   const navItems = [
     { to: '/', label: 'Survey', icon: ClipboardList },
     { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+    { to: '/performance', label: 'Analytic Metrics', icon: BellPlusIcon },
   ];
 
   return (
