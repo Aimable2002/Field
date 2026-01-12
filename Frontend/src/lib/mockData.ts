@@ -40,6 +40,7 @@ export const teams: Team[] = [
   { id: '1', name: 'Kacyiru', members: [] },
   { id: '2', name: 'Nyarugenge', members: [] },
   { id: '3', name: 'Kicukiro', members: [] },
+  { id: '4', name: 'Gasabo', members: []  },
 ];
 
 export const defaultQuestions: Question[] = [

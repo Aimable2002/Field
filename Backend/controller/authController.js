@@ -5,6 +5,7 @@ const ALLOWED_TEAMS = [
   { id: '1', name: 'Kacyiru' },
   { id: '2', name: 'Nyarugenge' },
   { id: '3', name: 'Kicukiro' },
+  { id: '4', name: 'Gasabo' },
 ];
 
 const generateToken = (id) => {
@@ -91,7 +92,7 @@ export const login = async (req, res) => {
       return res.status(400).json({ message: 'Invalid team selected' });
     }
 
-    const user = await User.findOne({ email, teamName: team.name });
+    const user = await User.findOne({ email });
     if (!user || !(await user.matchPassword(password))) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
